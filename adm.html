@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="painel-admin.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            margin: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .topo {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .painel {
+            display: flex;
+            gap: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu {
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .menu h2 {
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            background-color: #fff;
+            color: #182848;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: #ddd;
+        }
+
+        .conteudo {
+            width: 70%;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .autenticacao {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .autenticacao input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .autenticacao button {
+            background-color: #00b894;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .autenticacao button:hover {
+            background-color: #019870;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .painel {
+                flex-direction: column;
+            }
+
+            .menu,
+            .conteudo {
+                width: 100%;
+            }
+        }
+    </style>
+    <header class="topo">
+        <h1>Painel Administrativo</h1>
+        <p>Prefeitura Municipal — Gestão de Espaços e Eventos Esportivos</p>
+    </header>
+
+    <main class="painel">
+        <nav class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><button>Cadastrar / Editar Eventos</button></li>
+                <li><button>Cadastrar / Editar Espaços Esportivos</button></li>
+                <li><button>Gerar Relatórios</button></li>
+                <li><button>Moderar Comentários</button></li>
+            </ul>
+        </nav>
+
+        <section class="conteudo">
+            <h2>Autenticação de Acesso</h2>
+            <form class="autenticacao">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" placeholder="Digite seu usuário">
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+
+                <label for="codigo">Código MFA:</label>
+                <input type="text" id="codigo" placeholder="Digite o código de autenticação">
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

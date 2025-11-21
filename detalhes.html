@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Inscrição - +Esporte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --verde-principal: #2e7d32;
+            --verde-claro: #a5d6a7;
+            --branco: #ffffff;
+            --cinza-claro: #f5f5f5;
+            --cinza-escuro: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            background-image: url('https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            color: var(--cinza-escuro);
+        }
+
+        header {
+            background-color: var(--verde-principal);
+            color: var(--branco);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--verde-claro);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: var(--branco);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--verde-principal);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .event-details p {
+            background: var(--cinza-claro);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-details i {
+            color: var(--verde-principal);
+        }
+
+        .actions {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--verde-principal);
+            color: var(--branco);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-sec {
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+        }
+
+        .btn-sec:hover {
+            background-color: #ddd;
+        }
+
+        .confirmation {
+            background: var(--verde-claro);
+            color: var(--cinza-escuro);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .actions {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-dumbbell"></i> +Esporte</div>
+        <nav>
+            <ul>
+                <li><a href="calendario.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="calendario.html"><i class="fa-solid fa-calendar-days"></i> Eventos</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Detalhes da Inscrição</h1>
+
+        <div class="event-details">
+            <p><i class="fa-solid fa-trophy"></i> <strong>Evento:</strong> Corrida de Rua</p>
+            <p><i class="fa-regular fa-calendar"></i> <strong>Data e Horário:</strong> 25/10 - 08:30</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Local:</strong> Parque das Dunas</p>
+            <p><i class="fa-solid fa-user"></i> <strong>Inscrito:</strong> João Silva</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>E-mail:</strong> joao.silva@email.com</p>
+        </div>
+
+        <div class="confirmation">
+            Sua inscrição foi confirmada! Apresente-se no local com 20 minutos de antecedência. Boa sorte!
+        </div>
+
+        <div class="actions">
+            <button class="btn-sec" onclick="window.location.href='calendario.html'">Voltar</button>
+            <button class="btn" onclick="alert('Cancelamento solicitado!')">Cancelar Inscrição</button>
+        </div>
+    </div>
+</body>
+
+</html>

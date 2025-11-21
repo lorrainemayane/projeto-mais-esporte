@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Espaço Esportivo</title>
+    <link rel="stylesheet" href="avaliar-espaco.css">
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Avaliação do Espaço Esportivo</h1>
+        <p>Compartilhe sua experiência com este espaço</p>
+    </header>
+
+    <main class="avaliacao-container">
+        <section class="avaliacao-card">
+            <h2>Quadra Poliesportiva do Parque Central</h2>
+            <p>Informe sua avaliação abaixo:</p>
+
+            <div class="estrelas">
+                <input type="radio" id="estrela5" name="estrela" value="5"><label for="estrela5">★</label>
+                <input type="radio" id="estrela4" name="estrela" value="4"><label for="estrela4">★</label>
+                <input type="radio" id="estrela3" name="estrela" value="3"><label for="estrela3">★</label>
+                <input type="radio" id="estrela2" name="estrela" value="2"><label for="estrela2">★</label>
+                <input type="radio" id="estrela1" name="estrela" value="1"><label for="estrela1">★</label>
+            </div>
+
+            <textarea id="comentario" placeholder="Escreva seu comentário..."></textarea>
+
+            <button id="enviar">Enviar Avaliação</button>
+
+            <p class="media">⭐ Média atual: <span id="mediaValor">4.9</span></p>
+            <p class="msg" id="msg"></p>
+        </section>
+    </main>
+
+    <script>
+        const botao = document.getElementById('enviar');
+        const msg = document.getElementById('msg');
+
+        botao.addEventListener('click', () => {
+            msg.textContent = "✅ Avaliação enviada com sucesso!";
+            msg.style.color = "#00b894";
+        });
+    </script>
+</body>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #4bb785, #182848);
+        color: #fff;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topo {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .avaliacao-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .avaliacao-card {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 30px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .estrelas {
+        direction: rtl;
+        display: inline-flex;
+        justify-content: center;
+        margin: 15px 0;
+    }
+
+    .estrelas input {
+        display: none;
+    }
+
+    .estrelas label {
+        font-size: 2em;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .estrelas input:checked~label {
+        color: gold;
+    }
+
+    .estrelas label:hover,
+    .estrelas label:hover~label {
+        color: gold;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 8px;
+        border: none;
+        padding: 10px;
+        margin-bottom: 15px;
+        resize: none;
+    }
+
+    button {
+        background-color: #00b894;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #019870;
+    }
+
+    .media {
+        margin-top: 15px;
+        font-size: 1.1em;
+    }
+
+    .msg {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .avaliacao-card {
+            padding: 20px;
+        }
+
+        .estrelas label {
+            font-size: 1.6em;
+        }
+    }
+</style>
+
+</html>

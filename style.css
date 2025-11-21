@@ -1,0 +1,144 @@
+/* --- Configurações Globais e Fundo --- */
+body {
+    /* 1. CONFIGURAÇÃO DA IMAGEM DE FUNDO */
+    /* ! IMPORTANTE: Mantenha o mesmo link de imagem para consistência */
+    background-image: url('https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    /* Faz a imagem cobrir a tela inteira */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-attachment: fixed;
+    /* Deixa a imagem fixa durante o scroll */
+
+    font-family: Arial, sans-serif;
+    /* Fonte limpa e moderna */
+    margin: 0;
+
+    /* Centraliza o formulário na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Altura total da tela */
+    color: #fff;
+    /* Cor do texto padrão (branco) */
+}
+
+/* --- O Contêiner Transparente --- */
+.container {
+    /* 2. O FORMULÁRIO TRANSPARENTE */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fundo preto com 60% de transparência */
+    padding: 2.5rem;
+    border-radius: 15px;
+
+    /* Efeito "vidro fosco" (Glassmorphism) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Para funcionar no Safari */
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Borda sutil */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Sombra para dar profundidade */
+
+    width: 380px;
+    text-align: center;
+}
+
+/* --- Título (Login / Cadastro de Usuário) --- */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra no texto para destacar */
+}
+
+/* --- Labels (E-mail, Senha, Nome) --- */
+label {
+    display: block;
+    /* Faz o label ficar em sua própria linha */
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- Campos de Input (Nome, E-mail, Senha) --- */
+/*
+ * >>> ESTA FOI A ÚNICA MUDANÇA <<<
+ * Adicionamos 'input[type="text"]' para estilizar o campo "Nome"
+ */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+
+    /* Fundo dos inputs semi-transparente */
+    background-color: rgba(255, 255, 255, 0.1);
+
+    color: #fff;
+    /* Cor do texto digitado */
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Garante que o padding não estoure a largura */
+}
+
+/* Muda a cor do texto de placeholder */
+input::placeholder {
+    color: #ccc;
+}
+
+/* --- Botão (Entrar / Cadastrar) --- */
+button {
+    /* 3. A COR VERDE ESPORTE */
+    background-color: #00c853;
+    /* Um verde vibrante */
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    /* Deixa o texto em maiúsculas */
+
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    /* Muda o mouse para "mãozinha" */
+
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #00e676;
+    /* Verde um pouco mais claro */
+}
+
+/* Efeito ao clicar */
+button:active {
+    transform: scale(0.98);
+    /* Leve "afundada" ao clicar */
+}
+
+/* --- Link de Login / Cadastro --- */
+p {
+    margin-top: 2rem;
+}
+
+a {
+    color: #00e676;
+    /* Mesmo verde claro do hover do botão */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
